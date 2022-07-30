@@ -78,3 +78,12 @@ To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+
+This is an app to create, store, and manage a data base for any sports team or player. 
+
+You can create individual players and add them to any team you've created. You can also change the team that player belongs to at any time. 
+
+You can create any team of any sport and view the players for that particular team.
+
+You can search for any player in that database.
