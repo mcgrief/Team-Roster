@@ -1,4 +1,5 @@
 import { Button } from 'react-bootstrap';
+import Head from 'next/head';
 import { signOut } from '../utils/auth';
 import { useAuth } from '../utils/context/authContext';
 
@@ -15,6 +16,13 @@ function Home() {
         margin: '0 auto',
       }}
     >
+      <Head>
+        <meta charset="UTF-8" />
+        <meta name="keywords" content="title, meta, nextjs" />
+        <meta name="author" content="Adam Steel" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SPORTS</title>
+      </Head>
       <h1>Hello {user.displayName}! </h1>
       <p>Click the button below to logout!</p>
       <Button variant="danger" type="button" size="lg" className="copy-btn" onClick={signOut}>

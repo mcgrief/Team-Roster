@@ -11,6 +11,7 @@ function PlayerCard({ playerObj, onUpdate }) {
       deleteSinglePlayer(playerObj.firebaseKey).then(() => onUpdate());
     }
   };
+
   return (
 
     <Card style={{ width: '18rem' }}>
