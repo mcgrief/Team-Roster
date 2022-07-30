@@ -87,3 +87,7 @@ You can create individual players and add them to any team you've created. You c
 You can create any team of any sport and view the players for that particular team.
 
 You can search for any player in that database.
+
+site URL: https://steel-team-roster.netlify.app
+
+Loom video for site: https://www.loom.com/share/173aad5d794344e38ed902a20c7e4ec9
