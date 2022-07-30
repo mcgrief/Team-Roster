@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Head from 'next/head';
 import Link from 'next/link';
 import { Button } from 'react-bootstrap';
 import { useAuth } from '../utils/context/authContext';
@@ -22,17 +23,23 @@ export default function Players() {
   }, [user.uid]);
 
   return (
-    <div className="text-center my-4">
-      <Search players={players} setFilteredPlayers={setFilteredPlayers} />
-      <Link href="/player/new" passHref>
-        <Button>Recruit a new teammate!</Button>
-      </Link>
-      <div className="d-flex flex-wrap">
-        {filteredPlayers.map((player) => (
-          <PlayerCard key={player.firebaseKey} playerObj={player} onUpdate={getAllThePlayers} />
-        ))}
-      </div>
+    <>
+      <Head>
+        <title>All the Players!</title>
+        <meta name="description" content="Meta description for the team page" />
+      </Head>
+      <div className="text-center my-4">
+        <Search players={players} setFilteredPlayers={setFilteredPlayers} />
+        <Link href="/player/new" passHref>
+          <Button>Recruit a new teammate!</Button>
+        </Link>
+        <div className="d-flex flex-wrap">
+          {filteredPlayers.map((player) => (
+            <PlayerCard key={player.firebaseKey} playerObj={player} onUpdate={getAllThePlayers} />
+          ))}
+        </div>
 
-    </div>
+      </div>
+    </>
   );
 }
